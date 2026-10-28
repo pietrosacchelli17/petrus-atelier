@@ -163,8 +163,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         ${collapsed ? 'w-16' : 'w-56'}
         ${mobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
-        {/* Logo — click to see what Keystone is */}
-        <button onClick={() => router.push('/about')}
+        {/* Logo — click to open the Keystone website */}
+        <button onClick={() => { window.location.href = '/keystone' }}
           className={`flex items-center gap-3 px-4 h-14 border-b border-stone-800 flex-shrink-0 hover:bg-stone-800/60 transition-colors text-left w-full ${collapsed ? 'justify-center' : ''}`}>
           <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-stone-700">
             <img src="/icon-192.png" alt="Keystone" className="w-full h-full object-cover" />
