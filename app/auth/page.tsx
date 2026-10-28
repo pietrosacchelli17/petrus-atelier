@@ -30,7 +30,7 @@ export default function AuthPage() {
         {/* Wordmark */}
         <div className="mb-10">
           <div className="text-xs font-medium tracking-[0.2em] text-stone-400 uppercase">Keystone</div>
-          <div className="text-xs tracking-[0.15em] text-stone-300 uppercase mt-0.5">Stoneline UK</div>
+          <div className="text-xs tracking-[0.15em] text-stone-300 uppercase mt-0.5">Petrus Atelier</div>
         </div>
 
         <form onSubmit={handleSignIn} className="space-y-5">

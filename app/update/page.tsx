@@ -116,7 +116,7 @@ function UpdateForm() {
             </svg>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#8C7F58' }}>Stoneline UK</p>
+            <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#8C7F58' }}>Petrus Atelier</p>
             <h1 className="text-lg font-semibold text-stone-900 leading-tight">
               Weekly update — {pm?.full_name?.split(' ')[0]}
             </h1>

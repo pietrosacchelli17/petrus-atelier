@@ -152,7 +152,7 @@ export default function ReportsPage() {
     // KEYSTONE kicker
     pdf.setFontSize(7); pdf.setFont('helvetica', 'normal')
     pdf.setTextColor(154, 122, 79)
-    pdf.text('KEYSTONE  ·  STONELINE UK', 16, 11, { charSpace: 1.2 })
+    pdf.text('KEYSTONE  ·  PETRUS ATELIER', 16, 11, { charSpace: 1.2 })
     // Title
     pdf.setFontSize(20); pdf.setFont('helvetica', 'bold')
     pdf.setTextColor(30, 25, 20)
@@ -1168,7 +1168,7 @@ export default function ReportsPage() {
       {/* Everything inside this div is what gets captured into the PDF */}
       <div ref={reportRef} className="space-y-6 bg-stone-50">
         <div className="bg-white rounded-xl px-5 py-4 border border-stone-100">
-          <h2 className="text-lg font-semibold text-stone-900">Stoneline UK — Weekly Report</h2>
+          <h2 className="text-lg font-semibold text-stone-900">Petrus Atelier — Weekly Report</h2>
           <p className="text-sm text-stone-500 mt-0.5">{data.weekRangeLabel} (Monday – Friday)</p>
         </div>
 

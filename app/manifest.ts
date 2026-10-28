@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Keystone',
     short_name: 'Keystone',
-    description: 'ERP Stoneline',
+    description: 'ERP Petrus Atelier',
     start_url: '/',
     display: 'standalone',
     background_color: '#fafaf9',

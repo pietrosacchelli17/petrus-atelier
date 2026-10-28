@@ -506,7 +506,7 @@ function SalesPageInner() {
     pdf.setFontSize(16); pdf.setFont('helvetica', 'bold')
     pdf.text('SAMPLE REQUEST', 15, 20)
     pdf.setFontSize(9); pdf.setFont('helvetica', 'normal'); pdf.setTextColor(120, 113, 108)
-    pdf.text('Stoneline UK', 15, 26)
+    pdf.text('Petrus Atelier', 15, 26)
 
     let y = 40
     const field = (label: string, value: string) => {

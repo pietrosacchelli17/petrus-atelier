@@ -300,7 +300,7 @@ export default function MySalesPipelinePage() {
 ${isAdmin ? `<div class="sec"><div class="st">By team member</div><table><thead><tr><th>#</th><th>Name</th><th>Actions</th><th>Contacts</th><th>Quotes</th><th>Score</th></tr></thead><tbody>${lbRows}</tbody></table></div>` : ''}
 ${personSections || '<div class="sec"><div class="st">Actions</div><p style="color:#a8a29e">No actions logged this week.</p></div>'}
 ${cold.length > 0 ? `<div class="sec"><div class="st">⚠ At Risk — Going Cold (30+ days) — ${myUser?.full_name || 'yours'}</div><table><thead><tr><th>Contact</th><th>Last action</th><th>Date</th><th>Days since</th></tr></thead><tbody>${cRows}</tbody></table></div>` : ''}
-<div class="ft">Keystone · Stoneline UK &nbsp;·&nbsp; ${format(new Date(),'d MMM yyyy HH:mm')}</div></body></html>`
+<div class="ft">Keystone · Petrus Atelier &nbsp;·&nbsp; ${format(new Date(),'d MMM yyyy HH:mm')}</div></body></html>`
     const blob = new Blob([html], { type: 'text/html' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')

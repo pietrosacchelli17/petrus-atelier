@@ -172,7 +172,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {!collapsed && (
             <div className="min-w-0">
               <div className="text-white text-sm font-medium leading-none tracking-normal">Keystone</div>
-              <div className="text-stone-500 text-[11px] mt-1 tracking-wide">Stoneline UK</div>
+              <div className="text-stone-500 text-[11px] mt-1 tracking-wide">Petrus Atelier</div>
             </div>
           )}
         </button>

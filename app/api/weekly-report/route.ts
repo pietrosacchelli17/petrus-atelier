@@ -76,7 +76,7 @@ function pageHeader(pdf: jsPDF, title: string, subtitle: string) {
   pdf.setFillColor(28, 25, 23)
   pdf.rect(0, 0, 210, 32, 'F')
   pdf.setTextColor(140, 127, 88); pdf.setFontSize(9)
-  pdf.text('STONELINE UK', 15, 14)
+  pdf.text('PETRUS ATELIER', 15, 14)
   pdf.setTextColor(255, 255, 255); pdf.setFontSize(18)
   pdf.text(title, 15, 23)
   pdf.setFontSize(10); pdf.setTextColor(200, 200, 200)

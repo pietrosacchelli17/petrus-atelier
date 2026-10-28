@@ -31,7 +31,7 @@ export default function AboutPage() {
         </p>
 
         <p className="text-xs font-medium tracking-[0.15em] text-stone-500 mb-4">
-          STONELINE UK
+          PETRUS ATELIER
         </p>
 
         <h1 className="text-2xl font-semibold text-stone-900 mb-4">Keystone</h1>
