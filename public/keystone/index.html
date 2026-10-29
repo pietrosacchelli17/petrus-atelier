@@ -159,6 +159,13 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
 .sh-row .t{font-weight:400}
 .sh-sub{display:flex;justify-content:flex-end;gap:28px;padding:8px 0 2px;border-top:1px solid rgba(30,28,25,.18);font-weight:400}
 @media (max-width:560px){.sheet{font-size:12px}.sh-row{grid-template-columns:1fr auto;row-gap:2px}.sh-row span:nth-child(2),.sh-row span:nth-child(3){display:none}.sh-two{grid-template-columns:1fr}}
+
+/* Dot cursor on devices with a mouse; touch screens keep normal behaviour */
+.dot{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:2147483000;opacity:0;transition:width .18s,height .18s,margin .18s,opacity .2s}
+.dot.on{opacity:1}
+.dot.big{width:22px;height:22px;margin:-11px 0 0 -11px}
+@media (hover:hover) and (pointer:fine){html.has-dot,html.has-dot *{cursor:none!important}}
+@media (hover:none),(pointer:coarse){.dot{display:none}}
 </style>
 
 <div class="notice">Demo site. All screens use demo data.</div>
@@ -419,4 +426,22 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
 <footer><span>Keystone · Quotes · Projects · Finance</span><span>Designed and built by Pietro Sacchelli</span></footer>
 </div>
 
+<script>
+// Dot cursor (mouse devices only)
+if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot);
+  document.documentElement.classList.add('has-dot');
+  let x = 0, y = 0, raf = 0;
+  const draw = () => { dot.style.transform = `translate(${x}px, ${y}px)`; raf = 0; };
+  addEventListener('mousemove', e => {
+    x = e.clientX; y = e.clientY; dot.classList.add('on');
+    if (!raf) raf = requestAnimationFrame(draw);
+    dot.classList.toggle('big', !!e.target.closest('a, button, summary, input, textarea, select, label'));
+  }, { passive: true });
+  document.addEventListener('mouseleave', () => dot.classList.remove('on'));
+}
+</script>
 </body></html>
