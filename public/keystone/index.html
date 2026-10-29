@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Keystone — Quotes, projects and finance for stone and joinery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
 /* Keystone: black, thin Jost, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
 :root{
@@ -139,6 +139,24 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
 @media (max-width:860px){.hero,.problem,.split,.wrow,.wrow.flip,.fit,.about,.data{grid-template-columns:1fr;gap:32px}.wrow.flip .wtext{order:0}.grid,.three,.notes{grid-template-columns:1fr}.grid .card{border-right:0;border-bottom:1px solid var(--line)!important}.grid .card:last-child{border-bottom:0!important}.data .card{border-right:0;border-bottom:1px solid var(--line)}section{padding-block:64px}.walk{gap:64px}}
 @media (max-width:560px){.flow,.plans,.pair{grid-template-columns:1fr}.fstep,.plan{border-right:0}.steps div{grid-template-columns:44px 1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Light direction, from the Keystone template: warm off-white, thin Jost, mono labels, faint 12-column grid. */
+:root{--bg:#F4F1EA;--surface:#F8F6F0;--soft:#ECE8DE;--ink:#1E1C19;--mute:#55524c;--line:rgba(30,28,25,.16);--gold:#8C8A84;--dark:#1E1C19;--on-dark:#F4F1EA;--on-dark-mute:rgba(244,241,234,.66);--stone:#6f6d67;--btn:#1E1C19;--on-btn:#F4F1EA;--mono:'IBM Plex Mono',ui-monospace,monospace;color-scheme:light}
+.wrap{position:relative;isolation:isolate}
+.wrap::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc(100%/12) 100%;box-shadow:inset -1px 0 0 var(--line)}
+h1{font-size:clamp(2.8rem,7.4vw,7rem)}
+.eyebrow,.links a,.topbar a,.small,figcaption,.fstep i,.wtext .num,th,.tag,.badge,.plan .u,footer,.notice{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:400}
+.eyebrow,.small,figcaption{color:var(--stone)}
+.small{font-size:11px}
+.stats b,.about h2,.facts b{color:var(--on-dark)}
+.facts div{border-top-color:rgba(244,241,234,.18)}
+.stats small{font-family:var(--mono);letter-spacing:.06em}
+.fstep.end p,.plan.pick p,.plan.pick .u,.plan.pick .p small{color:rgba(244,241,234,.7)}
+.fstep.end{background:var(--ink)}
+.plan.pick{background:var(--ink);color:var(--on-btn)}
+.shot img{background:#fff}
+.btn{letter-spacing:.18em}
+@media (max-width:860px){.wrap::before{background-size:calc(100%/4) 100%}}
 </style>
 
 <div class="notice">Demo site. All screens use demo data.</div>
@@ -190,12 +208,12 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
   <div class="walk">
     <div class="wrow">
       <div class="wtext"><div class="num">01</div><h3>Win the work</h3><p>Every opportunity sits on one board with its stage, its value and who owns it. Open one and the client, estimates, samples, notes and follow-ups are all together.</p><ul><li>Leads, quotes and won work in one list</li><li>Follow-up reminders on every quote</li><li>Duplicates merged, pipeline exported in one click</li></ul></div>
-      <div class="pair"><figure class="shot"><img src="/keystone/img/sales-board.jpg" alt="Sales projects board listing opportunities with type, stage, owner and value"></figure><figure class="shot"><img src="/keystone/img/sales-project.jpg" alt="One sales project showing stage, value, account manager, quotes and invoices"></figure></div>
+      <figure class="shot"><img src="/keystone/img/sales-board.jpg" alt="Sales projects board listing opportunities with type, stage, owner and value" loading="lazy"></figure>
     </div>
 
     <div class="wrow flip">
       <div class="wtext"><div class="num">02</div><h3>Price it, in your own layout</h3><p>Build the estimate by floor, room or area, with materials, finishes and installation. It goes out as a branded PDF with photos of the stone. Every earlier version is kept.</p><ul><li>Quantities in m², linear metres, days or units</li><li>Headings, notes and descriptions</li><li>PDF and Excel export</li></ul></div>
-      <div class="pdfs"><figure class="shot"><img src="/keystone/img/estimate-pdf.jpg" alt="Estimate PDF with material and fabrication lines grouped by floor"><figcaption>The estimate your client receives.</figcaption></figure><figure class="shot"><img src="/keystone/img/invoice-pdf.jpg" alt="Matching invoice PDF with amount due"><figcaption>The matching invoice, from the same record.</figcaption></figure></div>
+      <div class="pdfs" style="grid-template-columns:1fr;max-width:420px"><figure class="shot"><img src="/keystone/img/estimate-pdf.jpg" alt="Estimate PDF with material and fabrication lines grouped by floor" loading="lazy"><figcaption>The estimate your client receives.</figcaption></figure></div>
     </div>
 
     <div class="wrow">
@@ -210,20 +228,10 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
 
     <div class="wrow">
       <div class="wtext"><div class="num">05</div><h3>Get paid</h3><p>Three steps: create the invoice from a payment stage, send it, tick it off when it is paid. Overdue invoices are flagged with the number of days, and paying one marks its stage paid in finance.</p><ul><li>Numbered PDF invoices from the quote</li><li>Who owes what, and how late</li><li>Money in and out across every project in one list</li></ul></div>
-      <div class="pair"><figure class="shot"><img src="/keystone/img/invoices.jpg" alt="Invoices page with ready, waiting for payment, overdue and paid totals"></figure><figure class="shot"><img src="/keystone/img/finance-report.jpg" alt="Finance report listing every project's contract value, income, expenses and margin"></figure></div>
+      <figure class="shot"><img src="/keystone/img/invoices.jpg" alt="Invoices page with ready, waiting for payment, overdue and paid totals" loading="lazy"></figure>
     </div>
   </div>
 
-  <div style="margin-top:72px">
-    <h3 style="font-size:clamp(24px,3vw,30px);letter-spacing:-.035em">And the day-to-day around it</h3>
-    <div class="three">
-      <figure class="shot"><img src="/keystone/img/dashboard.jpg" alt="Keystone dashboard showing open sales projects, deliveries, tasks and overdue items for one person" width="1100" height="545"><figcaption>Each person starts the day with their own jobs, follow-ups and to-dos.</figcaption></figure>
-      <figure class="shot"><img src="/keystone/img/samples.jpg" alt="Sample board with columns from requested to delivered"><figcaption>Samples asked for, sent and returned.</figcaption></figure>
-      <figure class="shot"><img src="/keystone/img/calendar.jpg" alt="Monthly calendar of site visits, deliveries and deadlines"><figcaption>One calendar for site visits, deliveries and deadlines.</figcaption></figure>
-      <figure class="shot"><img src="/keystone/img/companies.jpg" alt="Companies list of clients and suppliers"><figcaption>Clients, suppliers and contacts in one list.</figcaption></figure>
-    </div>
-    <p class="small" style="margin-top:16px">All screens use demo data.</p>
-  </div>
 </section>
 
 <section id="features">
