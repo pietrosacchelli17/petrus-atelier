@@ -157,6 +157,26 @@ h1{font-size:clamp(2.8rem,7.4vw,7rem)}
 .shot img{background:#fff}
 .btn{letter-spacing:.18em}
 @media (max-width:860px){.wrap::before{background-size:calc(100%/4) 100%}}
+
+/* Example estimate sheet, drawn in the page so it stays sharp at any size */
+.sheet-wrap{margin:0;min-width:0}
+.sheet{background:#fbfaf6;color:#1E1C19;border:1px solid var(--line);padding:clamp(18px,3vw,34px);font-size:13px;line-height:1.45;letter-spacing:.01em;box-shadow:0 30px 60px -40px rgba(30,28,25,.45)}
+.sheet small{display:block;color:#7a766e;font-size:11px}
+.sh-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;border-bottom:1px solid rgba(30,28,25,.18);padding-bottom:12px}
+.sh-logo{font-size:15px;font-weight:400;letter-spacing:.16em;text-transform:uppercase}
+.sh-addr{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7a766e}
+.sh-title{font-size:clamp(2rem,4vw,3rem);font-weight:200;line-height:1;margin:22px 0 6px}
+.sh-meta{display:flex;gap:18px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7a766e;margin-bottom:18px}
+.sh-two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.sh-two b{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:400;color:#7a766e;margin-bottom:4px}
+.sh-two span{display:block}
+.sh-sec{margin-top:18px;padding:6px 0;border-top:1px solid #1E1C19;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.sh-floor{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#7a766e;margin:10px 0 2px}
+.sh-row{display:grid;grid-template-columns:minmax(0,2.6fr) .8fr .8fr 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(30,28,25,.1);align-items:baseline}
+.sh-row span:nth-child(n+2){text-align:right;white-space:nowrap}
+.sh-row .t{font-weight:400}
+.sh-sub{display:flex;justify-content:flex-end;gap:28px;padding:8px 0 2px;border-top:1px solid rgba(30,28,25,.18);font-weight:400}
+@media (max-width:560px){.sheet{font-size:12px}.sh-row{grid-template-columns:1fr auto;row-gap:2px}.sh-row span:nth-child(2),.sh-row span:nth-child(3){display:none}.sh-two{grid-template-columns:1fr}}
 </style>
 
 <div class="notice">Demo site. All screens use demo data.</div>
@@ -213,7 +233,31 @@ h1{font-size:clamp(2.8rem,7.4vw,7rem)}
 
     <div class="wrow flip">
       <div class="wtext"><div class="num">02</div><h3>Price it, in your own layout</h3><p>Build the estimate by floor, room or area, with materials, finishes and installation. It goes out as a branded PDF with photos of the stone. Every earlier version is kept.</p><ul><li>Quantities in m², linear metres, days or units</li><li>Headings, notes and descriptions</li><li>PDF and Excel export</li></ul></div>
-      <div class="pdfs" style="grid-template-columns:1fr;max-width:420px"><figure class="shot"><img src="/keystone/img/estimate-pdf.jpg" alt="Estimate PDF with material and fabrication lines grouped by floor" loading="lazy"><figcaption>The estimate your client receives.</figcaption></figure></div>
+      <figure class="sheet-wrap" aria-label="Example estimate, built from demo data">
+        <div class="sheet" role="img" aria-label="An estimate for Kensington Penthouse with materials grouped by floor, subtotals and installation">
+          <div class="sh-top"><span class="sh-logo">Keystone Stoneworks</span><span class="sh-addr">Unit 4, Keystone Yard · Marble Lane · London SE1 0AA</span></div>
+          <div class="sh-title">Estimate</div>
+          <div class="sh-meta"><span>EST-KP-2026-014</span><span>03/06/2026</span></div>
+          <div class="sh-two">
+            <div><b>Prepared for</b><span>Hartwell Interiors</span><span>Kensington Penthouse</span></div>
+            <div><b>Details</b><span>Account manager: Daniel Reeves</span><span>Supply &amp; install · GBP</span></div>
+          </div>
+          <div class="sh-sec">Material &amp; fabrication</div>
+          <div class="sh-floor">Ground floor</div>
+          <div class="sh-row"><span class="m">Calacatta Oro 20mm, polished<small>Hall, floor</small></span><span>27.52 m²</span><span>£428.00</span><span class="t">£11,778.56</span></div>
+          <div class="sh-row"><span class="m">Calacatta Oro 20mm, polished<small>Hall, skirting</small></span><span>18.4 lm</span><span>£102.00</span><span class="t">£1,876.80</span></div>
+          <div class="sh-row"><span class="m">Nero Marquina 20mm, honed<small>Kitchen worktop and upstand, with sink cut-out</small></span><span>1.83 m²</span><span>£618.20</span><span class="t">£1,131.31</span></div>
+          <div class="sh-floor">First floor</div>
+          <div class="sh-row"><span class="m">Travertine Classic 20mm, brushed<small>Ensuite, walls and floor</small></span><span>17.2 m²</span><span>£187.00</span><span class="t">£3,216.40</span></div>
+          <div class="sh-row"><span class="m">Bianco Carrara 20mm, honed<small>Vanity unit</small></span><span>1 unit</span><span>£866.00</span><span class="t">£866.00</span></div>
+          <div class="sh-sub"><span>Subtotal</span><span>£18,869.07</span></div>
+          <div class="sh-sec">Dry fit installation</div>
+          <div class="sh-row"><span class="m">Templating<small>Two days on site</small></span><span>2 days</span><span>£575.00</span><span class="t">£1,150.00</span></div>
+          <div class="sh-row"><span class="m">Installation labour<small>Adhesive, grouting and consumables included</small></span><span>1 unit</span><span>£9,800.00</span><span class="t">£9,800.00</span></div>
+          <div class="sh-sub"><span>Subtotal</span><span>£10,950.00</span></div>
+        </div>
+        <figcaption>An example estimate in your own layout, from demo data.</figcaption>
+      </figure>
     </div>
 
     <div class="wrow">
