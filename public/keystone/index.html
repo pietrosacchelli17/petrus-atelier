@@ -37,7 +37,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;paddi
 .btn:hover{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:var(--on-btn)}
 .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 section{padding-block:96px;scroll-margin-top:12px;border-top:1px solid var(--line)}
-.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;padding-block:48px 96px}
+.hero{display:block;padding-block:clamp(64px,12vw,160px) 120px}.hero h1{max-width:16ch}.hero .lede{max-width:56ch}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .hero h1{margin-bottom:26px}
 .shot{background:transparent;border:1px solid var(--line);padding:0;min-width:0}
@@ -69,7 +69,7 @@ figcaption{margin-top:12px;font-size:13px;letter-spacing:.06em;color:var(--mute)
 .wtext li,.card li{padding-left:18px;position:relative}
 .wtext li::before,.card li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--ink)}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.three{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
 .pdfs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:620px;justify-self:center;width:100%}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border:1px solid var(--line)}
 .card{background:transparent;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px;min-width:0}
@@ -158,7 +158,6 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
     <div class="actions"><a class="btn" href="#pilot">Become a pilot partner</a><a class="btn ghost" href="#how">See how a job flows</a></div>
     <p class="small" style="margin-top:22px">Designed and built by Pietro Sacchelli, from inside the stone trade.</p>
   </div>
-  <figure class="shot"><img src="/keystone/img/dashboard.jpg" alt="Keystone dashboard showing open sales projects, deliveries, tasks and overdue items for one person" width="1100" height="545"><figcaption>Each person starts the day with their own jobs, follow-ups and to-dos. Demo data.</figcaption></figure>
 </header>
 
 <section class="problem">
@@ -218,6 +217,7 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
   <div style="margin-top:72px">
     <h3 style="font-size:clamp(24px,3vw,30px);letter-spacing:-.035em">And the day-to-day around it</h3>
     <div class="three">
+      <figure class="shot"><img src="/keystone/img/dashboard.jpg" alt="Keystone dashboard showing open sales projects, deliveries, tasks and overdue items for one person" width="1100" height="545"><figcaption>Each person starts the day with their own jobs, follow-ups and to-dos.</figcaption></figure>
       <figure class="shot"><img src="/keystone/img/samples.jpg" alt="Sample board with columns from requested to delivered"><figcaption>Samples asked for, sent and returned.</figcaption></figure>
       <figure class="shot"><img src="/keystone/img/calendar.jpg" alt="Monthly calendar of site visits, deliveries and deadlines"><figcaption>One calendar for site visits, deliveries and deadlines.</figcaption></figure>
       <figure class="shot"><img src="/keystone/img/companies.jpg" alt="Companies list of clients and suppliers"><figcaption>Clients, suppliers and contacts in one list.</figcaption></figure>
