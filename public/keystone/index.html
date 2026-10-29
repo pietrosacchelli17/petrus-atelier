@@ -28,7 +28,7 @@ p{margin:0}
 .topbar a{text-decoration:none;color:var(--mute)}.topbar a:hover{color:var(--ink)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px 22px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
-.logo svg{width:18px;height:21px}.logo svg path{fill:currentColor;stroke:currentColor}
+.logo svg{width:18px;height:21px}.logo svg path{fill:#7D8C74;stroke:#7D8C74}
 .links{display:flex;gap:26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
 .links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:0;background:var(--btn);color:var(--on-btn);font-weight:400;font-size:12px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--btn);cursor:pointer;text-decoration:none;font-family:inherit}
@@ -139,24 +139,6 @@ footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute
 @media (max-width:860px){.hero,.problem,.split,.wrow,.wrow.flip,.fit,.about,.data{grid-template-columns:1fr;gap:32px}.wrow.flip .wtext{order:0}.grid,.three,.notes{grid-template-columns:1fr}.grid .card{border-right:0;border-bottom:1px solid var(--line)!important}.grid .card:last-child{border-bottom:0!important}.data .card{border-right:0;border-bottom:1px solid var(--line)}section{padding-block:64px}.walk{gap:64px}}
 @media (max-width:560px){.flow,.plans,.pair{grid-template-columns:1fr}.fstep,.plan{border-right:0}.steps div{grid-template-columns:44px 1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-/* Light direction, from the Keystone template: warm off-white, thin Jost, mono labels, faint 12-column grid. */
-:root{--bg:#F4F1EA;--surface:#F8F6F0;--soft:#ECE8DE;--ink:#1E1C19;--mute:#55524c;--line:rgba(30,28,25,.16);--gold:#8C8A84;--dark:#1E1C19;--on-dark:#F4F1EA;--on-dark-mute:rgba(244,241,234,.66);--stone:#6f6d67;--btn:#1E1C19;--on-btn:#F4F1EA;--mono:'IBM Plex Mono',ui-monospace,monospace;color-scheme:light}
-.wrap{position:relative;isolation:isolate}
-.wrap::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc(100%/12) 100%;box-shadow:inset -1px 0 0 var(--line)}
-h1{font-size:clamp(2.8rem,7.4vw,7rem)}
-.eyebrow,.links a,.topbar a,.small,figcaption,.fstep i,.wtext .num,th,.tag,.badge,.plan .u,footer,.notice{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:400}
-.eyebrow,.small,figcaption{color:var(--stone)}
-.small{font-size:11px}
-.stats b,.about h2,.facts b{color:var(--on-dark)}
-.facts div{border-top-color:rgba(244,241,234,.18)}
-.stats small{font-family:var(--mono);letter-spacing:.06em}
-.fstep.end p,.plan.pick p,.plan.pick .u,.plan.pick .p small{color:rgba(244,241,234,.7)}
-.fstep.end{background:var(--ink)}
-.plan.pick{background:var(--ink);color:var(--on-btn)}
-.shot img{background:#fff}
-.btn{letter-spacing:.18em}
-@media (max-width:860px){.wrap::before{background-size:calc(100%/4) 100%}}
 
 /* Example estimate sheet, drawn in the page so it stays sharp at any size */
 .sheet-wrap{margin:0;min-width:0}
